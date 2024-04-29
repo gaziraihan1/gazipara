@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+    .head{
+        @apply mt-2 font-mono hover:text-blue-500 transition-colors dark:text-white
+    }
+}
