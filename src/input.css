@@ -4,6 +4,6 @@
 
 @layer{
     .head{
-        @apply mt-2 font-mono hover:text-blue-500 transition-colors dark:text-white
+        @apply mt-2 font-mono hover:text-blue-500 transition-all dark:text-white sm:p-3 sm:mt-0 sm:hover:bg-slate-700
     }
 }

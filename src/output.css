@@ -562,20 +562,16 @@ video {
   position: relative;
 }
 
-.left-4 {
-  left: 1rem;
-}
-
 .top-10 {
   top: 2.5rem;
 }
 
-.col-start-2 {
-  grid-column-start: 2;
+.col-start-1 {
+  grid-column-start: 1;
 }
 
-.col-end-6 {
-  grid-column-end: 6;
+.col-end-7 {
+  grid-column-end: 7;
 }
 
 .row-start-1 {
@@ -618,8 +614,8 @@ video {
   grid-row-end: 6;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
+.m-auto {
+  margin: auto;
 }
 
 .inline {
@@ -646,12 +642,16 @@ video {
   height: 1.25rem;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .w-5 {
   width: 1.25rem;
 }
 
-.w-full {
-  width: 100%;
+.w-screen {
+  width: 100vw;
 }
 
 .grid-cols-6 {
@@ -701,12 +701,12 @@ video {
   padding-left: 0.5rem;
 }
 
-.pt-12 {
-  padding-top: 3rem;
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .text-center {
@@ -717,14 +717,8 @@ video {
   text-align: end;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-\[24px\] {
+  font-size: 24px;
 }
 
 .text-\[26px\] {
@@ -763,7 +757,7 @@ video {
   .head {
     margin-top: 0.5rem;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -777,6 +771,18 @@ video {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
+
+  @media (min-width: 640px) {
+    .head {
+      margin-top: 0px;
+      padding: 0.75rem;
+    }
+
+    .head:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+    }
+  }
 }
 
 .hover\:bg-gray-200:hover {
@@ -787,17 +793,6 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus\:ring-2:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.focus\:ring-gray-400:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(156 163 175 / var(--tw-ring-opacity));
 }
 
 .dark\:bg-gray-600:is(.dark *) {
@@ -825,14 +820,25 @@ video {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
-.dark\:focus\:ring-gray-700:focus:is(.dark *) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity));
-}
-
 @media (min-width: 640px) {
   .sm\:top-0 {
     top: 0px;
+  }
+
+  .sm\:left-8 {
+    left: 2rem;
+  }
+
+  .sm\:left-12 {
+    left: 3rem;
+  }
+
+  .sm\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .sm\:col-end-12 {
+    grid-column-end: 12;
   }
 
   .sm\:inline-flex {
@@ -841,6 +847,10 @@ video {
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:h-12 {
+    height: 3rem;
   }
 
   .sm\:h-6 {
@@ -863,21 +873,14 @@ video {
     justify-content: center;
   }
 
-  .sm\:bg-neutral-50 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(250 250 250 / var(--tw-bg-opacity));
-  }
-
-  .sm\:bg-inherit {
-    background-color: inherit;
+  @media (min-width: 640px) {
+    .sm\:sm\:justify-center {
+      justify-content: center;
+    }
   }
 
   .sm\:bg-transparent {
     background-color: transparent;
-  }
-
-  .sm\:bg-none {
-    background-image: none;
   }
 
   .sm\:p-2 {
@@ -886,5 +889,24 @@ video {
 
   .sm\:p-4 {
     padding: 1rem;
+  }
+
+  .sm\:p-3 {
+    padding: 0.75rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
